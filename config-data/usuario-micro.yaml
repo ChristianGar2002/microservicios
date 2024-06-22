@@ -1,25 +1,10 @@
 server:
   port: 8001
-
-sprign:
-  # Configuraciones de la base de datos
-  datasource:
-    url: jdbc:mysql://localhost:3306/micro
-    username: root
-    # spring.datasource.password=root
-    driver-class-name: com.mysql.cj.jdbc.Driver
-
-# Configuraciones de JPA
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    database-platform: org.hibernate.dialect.MySQL8Dialect
-
-feign:
+eureka:
   client:
-    config:
-      default:
-        loggerLevel: full
-        connectTimeout: 5000
-        readTimeout: 5000
+    fetch-registry: true #Con esto indicamos que se van a registrar en el servidor eureka
+    register-with-eureka: true #Y que este es un cliente de eureka
+    service-url:
+      default-zone: http://localhost:8761/eureka
+    instance:
+      hostname: localhost

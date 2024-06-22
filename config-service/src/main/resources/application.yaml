@@ -6,8 +6,8 @@ spring:
     config:
       server:
         git:
-          default-label: config-server #La rama donde esta la configuracion de los cliente(Proyectos)
-          uri: https://github.com/ChristianGar2002/microservicios
+          default-label: eureka #La rama donde esta la configuracion de los clientes(Proyectos)
+          uri: https://github.com/ChristianGar2002/microservicios/
           search-paths: config-data #La carpeta donde estan los archivos de configuracion
   application:
     name: config-service
