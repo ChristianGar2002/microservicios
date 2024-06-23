@@ -1,5 +1,5 @@
 server:
-  port: 8079
+  port: 8005
 eureka:
   client:
     fetch-registry: true #Con esto indicamos que se van a registrar en el servidor eureka, port: ${PORT:${SERVER_PORT:0}} ES PARA QUE ME DE UN PUERTO EL PRIMERO QUE ENCUENTRE
