@@ -6,7 +6,7 @@ spring:
     config:
       server:
         git:
-          default-label: multiple-instances #La rama donde esta la configuracion de los clientes(Proyectos)
+          default-label: gateway #La rama donde esta la configuracion de los clientes(Proyectos)
           uri: https://github.com/ChristianGar2002/microservicios/
           search-paths: config-data #La carpeta donde estan los archivos de configuracion
   application:
