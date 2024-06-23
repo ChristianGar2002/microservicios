@@ -5,7 +5,6 @@ eureka:
     fetch-registry: true #Con esto indicamos que se van a registrar en el servidor eureka, port: ${PORT:${SERVER_PORT:0}} ES PARA QUE ME DE UN PUERTO EL PRIMERO QUE ENCUENTRE
     register-with-eureka: true #Y que este es un cliente de eureka
     service-url:
-      default-zone: http://localhost:8761/eureka
+      defaultZone: http://localhost:8761/eureka
     instance:
-      instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-      #instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}} para que te genere un puerto aleatorio
+      instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}} #instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}} para que te genere un puerto aleatorio
