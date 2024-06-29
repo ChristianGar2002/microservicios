@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 //Con esta anotacion indico que este sera un cliente feign, el nombre del microservicio, la url de ese microservicio, de aqui se podra acceder a los que son los metodos get y post
-@FeignClient(name = "carro-micro",url = "http://localhost:8002/carro")
+@FeignClient(name = "CARRO-MICRO", path="/")
 public interface CarroFeignClient {
 
-    @PostMapping()
+    @PostMapping("/carro")
     public Carro save(@RequestBody Carro carro);
 
     @GetMapping("usuario/{usuarioId}")

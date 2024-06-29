@@ -9,10 +9,10 @@ import com.usuario_micro.modelos.Moto;
 
 import java.util.List;
 
-@FeignClient(name = "moto-micro", url = "http://localhost:8003/moto")
+@FeignClient(name = "MOTO-MICRO", path="/")
 public interface MotoFeignClient {
 
-    @PostMapping()
+    @PostMapping
     public Moto save(@RequestBody Moto moto);
 
     @GetMapping("/usuario/{usuarioId}")
