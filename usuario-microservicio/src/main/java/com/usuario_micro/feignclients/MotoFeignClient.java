@@ -9,7 +9,7 @@ import com.usuario_micro.modelos.Moto;
 
 import java.util.List;
 
-@FeignClient(name = "moto-micro", path="/")
+@FeignClient(name = "moto-micro")
 public interface MotoFeignClient {
 
     @PostMapping
