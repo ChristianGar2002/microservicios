@@ -10,9 +10,9 @@ import java.util.List;
 @FeignClient(name = "carro-micro")
 public interface CarroFeignClient {
 
-    @PostMapping
+    @PostMapping("/carro")
     public Carro save(@RequestBody Carro carro);
 
-    @GetMapping("/usuario/{usuarioId}")
+    @GetMapping("/carro/usuario/{usuarioId}")
     public List<Carro> getCarros(@PathVariable("usuarioId") int usuarioId);
 }

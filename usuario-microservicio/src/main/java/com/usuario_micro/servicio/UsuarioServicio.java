@@ -34,14 +34,14 @@ public class UsuarioServicio {
     public List<Carro> getCarros(int usuarioId){
 
         //Aqui hacemos una peticion a la api de carros para obtenerlos
-        List<Carro> carros = restTemplate.getForObject("http://localhost:8001/carro/usuario/" + usuarioId, List.class);
+        List<Carro> carros = restTemplate.getForObject("http://carro-micro/carro/usuario/" + usuarioId, List.class);
         return carros;
     }
 
     public List<Moto> getMotos(int usuarioId){
 
         //Aqui hacemos una peticion a la api de motos para obtenerlos
-        List<Moto> motos = restTemplate.getForObject("http://localhost:8083/moto/usuario/" + usuarioId, List.class);
+        List<Moto> motos = restTemplate.getForObject("http://moto-micro/moto/usuario/" + usuarioId, List.class);
 
         return motos;
     }
