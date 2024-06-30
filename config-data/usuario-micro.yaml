@@ -9,3 +9,32 @@ eureka:
     enabled: true
   instance:
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}} #instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}} para que te genere un puerto aleatorio
+resilience4j.circuitbreaker:
+    instances:
+        carrosCB:
+            registerHealthIndicator: true
+            slidingWindowSize: 10
+            permittedNumberOfCallsInHalfOpenState: 3
+            slidingWindowType: TIME_BASED
+            minimumNumberOfCalls: 4
+            waitDurationInOpenState: 5s
+            failureRateThreshold: 50
+            eventConsumerBufferSize: 10
+        motosCB:
+            registerHealthIndicator: true
+            slidingWindowSize: 10
+            permittedNumberOfCallsInHalfOpenState: 3
+            slidingWindowType: TIME_BASED
+            minimumNumberOfCalls: 4
+            waitDurationInOpenState: 5s
+            failureRateThreshold: 50
+            eventConsumerBufferSize: 10
+        todosCB: #CB (Circuit Breaker)
+            registerHealthIndicator: true
+            slidingWindowSize: 10
+            permittedNumberOfCallsInHalfOpenState: 3
+            slidingWindowType: TIME_BASED
+            minimumNumberOfCalls: 4
+            waitDurationInOpenState: 5s
+            failureRateThreshold: 50
+            eventConsumerBufferSize: 10
