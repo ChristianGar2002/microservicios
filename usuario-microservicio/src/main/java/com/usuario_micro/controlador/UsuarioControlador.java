@@ -72,7 +72,7 @@ public class UsuarioControlador {
         return ResponseEntity.ok(carros);
     }
 
-    @CircuitBreaker(name = "motosCB", fallbackMethod = "fallBackGeMotos")
+    @CircuitBreaker(name = "motosCB", fallbackMethod = "fallBackGetMotos")
     @GetMapping("/motos/{usuarioId}")
     public ResponseEntity<List<Moto>> listarMotos(@PathVariable("usuarioId") int id){
 
